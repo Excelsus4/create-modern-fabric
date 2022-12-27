@@ -1,13 +1,17 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
+	id "fabric-loom" version "1.0.+"
 	id 'maven-publish'
+	id "io.github.juuxel.loom-quiltflower" version "1.+" // Quiltflower, a better decompiler
+	id "io.github.p03w.machete" version "1.1.4" // automatic jar compressing on build
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
+String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
+version = mod_version + (buildNumber != null ? "-${buildNumber}" : "") + "+${project.minecraft_version}"
+
 archivesBaseName = project.archives_base_name
-version = project.mod_version
 group = project.maven_group
 
 repositories {
@@ -16,6 +20,36 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	mavenCentral()
+	maven { url = "https://maven.quiltmc.org/repository/release" }
+	maven { url = "https://hephaestus.dev/release" }
+	maven { url = "https://api.modrinth.com/maven" }
+	maven { url = "https://cursemaven.com" }
+	maven { url = "https://maven.parchmentmc.org" }
+	maven { url = "https://maven.fabricmc.net/" }
+	maven { url = "https://maven.tterrag.com/" }
+	maven { url = "https://storage.googleapis.com/devan-maven/" }
+	maven { url = "https://maven.shedaniel.me/" }
+	maven { url = "https://aperlambda.github.io/maven" }
+	maven { url = "https://ladysnake.jfrog.io/artifactory/mods" }
+	maven { url = "https://maven.kotlindiscord.com/repository/terraformers/" }
+	maven { url = "https://mvn.devos.one/releases/" }
+	maven { url = "https://mvn.devos.one/snapshots/" }
+	maven { url = "https://maven.terraformersmc.com/" }
+	maven { url = "https://maven.cafeteria.dev/releases/" }
+	maven { url = "https://jitpack.io/" }
+	maven { url = "https://maven.gegy.dev" }
+	maven { url = "https://dvs1.progwml6.com/files/maven/" }
+	maven { url = "https://modmaven.dev" }
+	maven { url = "https://maven.gudenau.net" }
+	maven { url = "https://maven.blamejared.com/vazkii/botania/Botania/" }
+	maven { url = "https://maven.kyrptonaught.dev/" }
+	maven {
+		url = "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup("com.jamieswhiteshirt")
+		}
+	}
 }
 
 dependencies {
