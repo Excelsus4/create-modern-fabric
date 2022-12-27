@@ -6,15 +6,16 @@
   "name": "Create Modern",
   "description": "Modern Technology Add-on for Create",
   "authors": [
-    "Excelsus_"
+    "Excelsus_",
+    "Siruka_"
   ],
   "contact": {
     "homepage": "https://github.com/Excelsus4/create-modern-fabric/wiki",
     "sources": "https://github.com/Excelsus4/create-modern-fabric"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/createmodern/icon.png",
 
   "environment": "*",
   "entrypoints": {
