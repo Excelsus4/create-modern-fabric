@@ -20,6 +20,9 @@ public class AllItems {
 	public static final ItemEntry<Item> RAW_CHROME =
 		taggedIngredient("raw_chrome", forgeItemTag("raw_materials/chrome"), forgeItemTag("raw_materials"));
 
+	public static final ItemEntry<Item> RAW_URANIUM =
+		taggedIngredient("raw_uranium", forgeItemTag("raw_materials/uranium"), forgeItemTag("raw_materials"));
+
 	@SafeVarargs
 	private static ItemEntry<Item> taggedIngredient(String name, TagKey<Item>... tags) {
 		return REGISTRATE.item(name, Item::new)
