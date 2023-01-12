@@ -1,0 +1,14 @@
+{
+  "_": "->------------------------]  Game Elements  [------------------------<-",
+
+  "block.create_modern.chrome_ore": "Chrome Ore",
+
+  "item.create_modern.raw_chrome": "Raw Chrome",
+  "item.create_modern.raw_uranium": "Raw Uranium",
+
+  "_": "->------------------------]  UI & Messages  [------------------------<-",
+
+  "itemGroup.create_modern": "Create Modern",
+
+  "_": "Thank you for translating Create Modern!"
+}

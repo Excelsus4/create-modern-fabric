@@ -1,7 +1,8 @@
 package com.excelsus.createmodern;
 
-import static com.excelsus.createmodern.AllItems.*;
+import static com.excelsus.createmodern.AllModernItems.*;
 
+import com.excelsus.createmodern.content.CreateModernItemGroup;
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -22,10 +23,7 @@ public class CreateModern implements ModInitializer {
 	public static final Logger LOGGER = LogUtils.getLogger();
 
 	private static final NonNullSupplier<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(ID);
-	public static final CreativeModeTab MODERN_CREATIVE_TAB = FabricItemGroupBuilder.build(
-		new ResourceLocation(ID, "modern"),
-		() -> new ItemStack(RAW_CHROME.get())
-	);
+	public static CreativeModeTab MODERN_CREATIVE_TAB = new CreateModernItemGroup();
 
 	@Override
 	public void onInitialize() {
@@ -34,7 +32,8 @@ public class CreateModern implements ModInitializer {
 	}
 
 	public static void onCtor() {
-		AllItems.register();
+		AllModernBlocks.register();
+		AllModernItems.register();
 		REGISTRATE.get().register();
 	}
 

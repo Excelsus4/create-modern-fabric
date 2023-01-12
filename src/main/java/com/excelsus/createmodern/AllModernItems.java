@@ -9,12 +9,12 @@ import com.simibubi.create.content.AllSections;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
-public class AllItems {
+public class AllModernItems {
 	private static final CreateRegistrate REGISTRATE = CreateModern.registrate()
 		.creativeModeTab(() -> CreateModern.MODERN_CREATIVE_TAB);
 
 	static {
-		REGISTRATE.startSection(AllSections.MATERIALS);
+		REGISTRATE.startSection(AllSections.PALETTES);
 	}
 
 	public static final ItemEntry<Item> RAW_CHROME =
