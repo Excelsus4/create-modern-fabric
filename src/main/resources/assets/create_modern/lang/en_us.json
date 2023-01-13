@@ -2,9 +2,26 @@
   "_": "->------------------------]  Game Elements  [------------------------<-",
 
   "block.create_modern.chrome_ore": "Chrome Ore",
-
   "item.create_modern.raw_chrome": "Raw Chrome",
+  "item.create_modern.crushed_chrome_ore": "Crushed Chrome",
+
+  "item.create_modern.stainless_steel_ingot": "Stainless Steel Ingot",
+
   "item.create_modern.raw_uranium": "Raw Uranium",
+  "item.create_modern.crushed_uranium_ore": "Crushed Uranium",
+  "item.create_modern.depleted_uranium": "Depleted Uranium",
+  "item.create_modern.low_enriched_uranium": "Low Enriched Uranium",
+  "item.create_modern.high_enriched_uranium": "Highly Enriched Uranium",
+
+  "item.create_modern.fish_powder": "Fish Paste",
+  "item.create_modern.fish_dough": "Fish Dough",
+  "item.create_modern.fish_cake_raw": "Raw Fish Cake",
+  "item.create_modern.fish_cake": "Fish Cake",
+  "item.create_modern.fish_cake_soup": "Fish Cake Soup",
+
+  "item.create_modern.yellow_cake": "Yellow Cake",
+
+  "block.create_modern.centrifuge": "Mechanical Centrifuge",
 
   "_": "->------------------------]  UI & Messages  [------------------------<-",
 

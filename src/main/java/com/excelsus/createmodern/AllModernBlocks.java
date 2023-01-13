@@ -12,6 +12,7 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 
+import com.excelsus.createmodern.content.contraptions.components.centrifuge.CentrifugeBlock;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.AllSections;
 import com.simibubi.create.content.contraptions.components.millstone.MillstoneBlock;
@@ -49,19 +50,19 @@ public class AllModernBlocks {
 		.build()
 		.register();
 
-	// static {
-	// 	REGISTRATE.startSection(AllSections.KINETICS);
-	// }
-	//
-	// public static final BlockEntry<MillstoneBlock> MILLSTONE = REGISTRATE.block("millstone", MillstoneBlock::new)
-	// 	.initialProperties(SharedProperties::stone)
-	// 	.properties(p -> p.color(MaterialColor.METAL))
-	// 	.transform(pickaxeOnly())
-	// 	.blockstate((c, p) -> p.simpleBlock(c.getEntry(), AssetLookup.partialBaseModel(c, p)))
-	// 	.transform(BlockStressDefaults.setImpact(4.0))
-	// 	.item()
-	// 	.transform(customItemModel())
-	// 	.register();
+	static {
+		REGISTRATE.startSection(AllSections.KINETICS);
+	}
+
+	public static final BlockEntry<CentrifugeBlock> CENTRIFUGE = REGISTRATE.block("centrifuge", CentrifugeBlock::new)
+		.initialProperties(SharedProperties::stone)
+		.properties(p -> p.color(MaterialColor.METAL))
+		.transform(pickaxeOnly())
+		.blockstate((c, p) -> p.simpleBlock(c.getEntry(), AssetLookup.partialBaseModel(c, p)))
+		.transform(BlockStressDefaults.setImpact(16.0))
+		.item()
+		.transform(customItemModel())
+		.register();
 
 	// Load this class
 	public static void register() {}

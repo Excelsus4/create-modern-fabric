@@ -1,6 +1,5 @@
 package com.excelsus.createmodern;
 
-import static com.excelsus.createmodern.AllModernItems.*;
 
 import com.excelsus.createmodern.content.CreateModernItemGroup;
 import com.mojang.logging.LogUtils;
@@ -10,10 +9,8 @@ import com.tterrag.registrate.util.nullness.NonNullSupplier;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 
 import org.slf4j.Logger;
 
@@ -34,6 +31,8 @@ public class CreateModern implements ModInitializer {
 	public static void onCtor() {
 		AllModernBlocks.register();
 		AllModernItems.register();
+		AllModernTileEntities.register();
+
 		REGISTRATE.get().register();
 	}
 
